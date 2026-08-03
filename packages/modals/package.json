@@ -55,6 +55,7 @@
     "@vitejs/plugin-react": "6.0.5",
     "@vitest/coverage-v8": "catalog:",
     "@zemd/tsconfig": "catalog:",
+    "fast-check": "catalog:",
     "happy-dom": "20.11.1",
     "react": "catalog:",
     "react-dom": "catalog:",
