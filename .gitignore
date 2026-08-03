@@ -1,0 +1,34 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# editors
+.idea
+
+# dependencies
+node_modules
+
+# testing
+coverage/
+
+# output
+dist/
+.next/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+pnpm-debug.log*
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# tools
+.turbo
+.pnpm-store/
+
+# release
+pnpm-publish-summary.json

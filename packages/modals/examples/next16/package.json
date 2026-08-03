@@ -1,0 +1,24 @@
+{
+  "name": "@zemd/example-react-modals-next16",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@zemd/react-modals": "workspace:*",
+    "next": "16.2.12",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@zemd/tsconfig": "catalog:",
+    "babel-plugin-react-compiler": "1.0.0",
+    "typescript": "catalog:"
+  }
+}

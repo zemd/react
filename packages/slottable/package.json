@@ -1,0 +1,82 @@
+{
+  "name": "@zemd/react-slottable",
+  "version": "4.0.3",
+  "description": "A lightweight concept to customize subcomponents in React",
+  "keywords": [
+    "component",
+    "deeply customized",
+    "library",
+    "react",
+    "slots",
+    "slottable",
+    "subcomponent"
+  ],
+  "homepage": "https://github.com/zemd/react/tree/main/packages/slottable",
+  "bugs": {
+    "url": "https://github.com/zemd/react/issues"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Dmytro Zelenetskyi",
+    "email": "oss@zemd.dev",
+    "url": "https://zemd.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zemd/react.git",
+    "directory": "packages/slottable"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown --minify",
+    "dev": "tsdown --watch",
+    "test": "vitest --run",
+    "test-coverage": "vitest --run --coverage",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "7.0.0",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "6.0.5",
+    "@vitest/coverage-v8": "catalog:",
+    "@zemd/tsconfig": "catalog:",
+    "happy-dom": "20.11.1",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["oxc", "typescript", "unicorn", "react", "jsx-a11y", "import", "promise"],
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "error"
+  },
+  "env": {
+    "browser": true,
+    "es2024": true
+  },
+  "rules": {
+    // Every package compiles JSX with the automatic runtime.
+    "react/react-in-jsx-scope": "off",
+    // Nominal branding (`declare const __brand: unique symbol`) relies on this.
+    "no-underscore-dangle": "off",
+    // Side-effect imports are the documented way to load CSS and test setup.
+    "import/no-unassigned-import": "off",
+    // Both libraries bridge generic variance with deliberate assertions.
+    "typescript/no-unsafe-type-assertion": "off",
+    "typescript/no-unnecessary-type-parameters": "off"
+  },
+  "ignorePatterns": ["**/dist/**", "**/.next/**", "**/.turbo/**"],
+  "overrides": [
+    {
+      "files": [".github/scripts/**"],
+      "plugins": ["node", "promise"],
+      "rules": {
+        // Release steps must stay sequential, so the awaits are deliberate.
+        "no-await-in-loop": "off"
+      }
+    },
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx", "**/vitest-setup.ts"],
+      "plugins": ["vitest"],
+      "rules": {
+        // Test fixtures are intentionally declared next to the case that uses them.
+        "unicorn/consistent-function-scoping": "off"
+      }
+    },
+    {
+      "files": ["packages/*/examples/**"],
+      "plugins": ["nextjs"]
+    }
+  ]
+}

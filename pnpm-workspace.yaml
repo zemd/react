@@ -1,0 +1,27 @@
+saveExact: true
+
+packages:
+  - packages/*
+  - packages/*/examples/*
+
+versioning:
+  changelog:
+    storage: repository
+
+catalog:
+  "@types/node": 26.1.2
+  "@types/react": 19.2.18
+  "@types/react-dom": 19.2.4
+  "@vitest/coverage-v8": 4.1.10
+  "@zemd/tsconfig": 2.1.0
+  react: 19.2.8
+  react-dom: 19.2.8
+  tsdown: 0.22.14
+  typescript: 7.0.2
+  vitest: 4.1.10
+
+minimumReleaseAgeExclude:
+  - "@zemd/*"
+
+allowBuilds:
+  sharp: true

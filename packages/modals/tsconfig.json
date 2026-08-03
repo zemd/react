@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@zemd/tsconfig/tsconfig-react.json",
+  "compilerOptions": {
+    "types": ["node", "react", "react-dom", "@testing-library/jest-dom/vitest"],
+    "noPropertyAccessFromIndexSignature": false,
+    // "files" only publishes "dist", so maps pointing at "src" would never resolve.
+    "sourceMap": false,
+    "declarationMap": false
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
