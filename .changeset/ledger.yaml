@@ -1,0 +1,4 @@
+"@zemd/react-modals@1.1.0":
+  dir: packages/modals
+  intents:
+    - major-drinks-ring
