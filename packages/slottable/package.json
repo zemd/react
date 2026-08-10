@@ -67,7 +67,7 @@
     "@vitest/coverage-v8": "catalog:",
     "@zemd/tsconfig": "catalog:",
     "fast-check": "catalog:",
-    "happy-dom": "20.11.1",
+    "happy-dom": "20.11.2",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tsdown": "catalog:",
