@@ -37,7 +37,7 @@ Commands run from the repository root and apply to the workspace packages that d
 | ---------------------------- | ---------------------------------------------------- |
 | `pnpm build`                 | Build workspace projects through Turborepo           |
 | `pnpm test`                  | Run package test suites                              |
-| `pnpm test-coverage`         | Run package test suites with V8 coverage reports     |
+| `pnpm test-coverage`         | Run package tests and write V8 coverage as LCOV      |
 | `pnpm typecheck`             | Type-check package source without emitting files     |
 | `pnpm format`                | Format the repository with `oxfmt`                   |
 | `pnpm format-check`          | Check formatting without writing changes             |
