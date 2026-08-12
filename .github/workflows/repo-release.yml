@@ -18,7 +18,7 @@ concurrency:
 jobs:
   release:
     name: Release
-    uses: zemd/js/.github/workflows/shared-release.yml@2bbd18b9bd71218a62529acd0b690286c0dbddea # v2.0.4
+    uses: zemd/js/.github/workflows/shared-release.yml@21c83f87bacb1e8082bbee1221f1f129a9b51082 # v2
     # Node.js lts/*, main, release/main, the release PR title, npmjs.org, and
     # the `build` and `lint-publish` scripts are fixed shared conventions.
     permissions:
@@ -28,7 +28,7 @@ jobs:
     with:
       # Keep this SHA equal to the one in `uses` above.
       shared-tooling-repository: zemd/js
-      shared-tooling-ref: 2bbd18b9bd71218a62529acd0b690286c0dbddea
+      shared-tooling-ref: 21c83f87bacb1e8082bbee1221f1f129a9b51082
       # contract-version-package: "" # Private workflow/tooling contract, if any.
       # staged-publishing: true # Set false when every release should publish directly.
     secrets:

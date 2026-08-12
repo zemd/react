@@ -20,7 +20,7 @@ concurrency:
 jobs:
   codeql:
     name: CodeQL
-    uses: zemd/js/.github/workflows/shared-codeql.yml@2bbd18b9bd71218a62529acd0b690286c0dbddea # v2.0.4
+    uses: zemd/js/.github/workflows/shared-codeql.yml@21c83f87bacb1e8082bbee1221f1f129a9b51082 # v2
     permissions:
       contents: read # checkout the repository for analysis
       actions: read # let CodeQL read workflow-run metadata
