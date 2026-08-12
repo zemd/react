@@ -24,14 +24,6 @@
   "ignorePatterns": ["**/dist/**", "**/.next/**", "**/.turbo/**"],
   "overrides": [
     {
-      "files": [".github/scripts/**"],
-      "plugins": ["node", "promise"],
-      "rules": {
-        // Release steps must stay sequential, so the awaits are deliberate.
-        "no-await-in-loop": "off"
-      }
-    },
-    {
       "files": ["**/*.test.ts", "**/*.test.tsx", "**/vitest-setup.ts"],
       "plugins": ["vitest"],
       "rules": {

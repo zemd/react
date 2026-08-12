@@ -1,0 +1,28 @@
+name: Scorecard
+
+permissions: {}
+
+on:
+  push:
+    branches:
+      - main
+  branch_protection_rule:
+  schedule:
+    - cron: "41 5 * * 1"
+
+concurrency:
+  group: scorecard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scorecard:
+    name: Scorecard
+    uses: zemd/js/.github/workflows/shared-scorecard.yml@2bbd18b9bd71218a62529acd0b690286c0dbddea # v2.0.4
+    permissions:
+      contents: read # checkout the repository for analysis
+      actions: read # inspect workflow runs for dangerous patterns
+      security-events: write # upload results to code scanning
+      id-token: write # publish results to the OpenSSF API
+    # with:
+    #   publish-results: true
+    #   artifact-retention-days: 5

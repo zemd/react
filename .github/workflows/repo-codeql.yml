@@ -1,0 +1,29 @@
+name: CodeQL
+
+permissions: {}
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    # Catches advisories published after the last commit.
+    - cron: "24 5 * * 1"
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  codeql:
+    name: CodeQL
+    uses: zemd/js/.github/workflows/shared-codeql.yml@2bbd18b9bd71218a62529acd0b690286c0dbddea # v2.0.4
+    permissions:
+      contents: read # checkout the repository for analysis
+      actions: read # let CodeQL read workflow-run metadata
+      security-events: write # upload results to code scanning
+    # with:
+    #   languages: '["actions", "javascript-typescript"]'
