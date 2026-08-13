@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repository_root="$(git rev-parse --show-toplevel)"
+cd "$repository_root"
+exec </dev/null
+
+pnpm run typecheck
+pnpm run lint-publish
+pnpm run test
+exec pnpm exec turbo run pre-push --filter='./packages/*'

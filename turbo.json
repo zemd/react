@@ -13,7 +13,15 @@
     },
     "test-coverage": {
       "dependsOn": ["^build"],
+      "cache": false,
       "outputs": ["coverage/**"]
+    },
+    "lint-publish": {
+      "dependsOn": ["build"]
+    },
+    "pre-commit": {},
+    "pre-push": {
+      "dependsOn": ["build"]
     },
     "typecheck": {
       "dependsOn": ["^build"],

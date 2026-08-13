@@ -4,6 +4,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   test: {
+    coverage: {
+      reporter: ["text", ["lcovonly", { file: "coverage.lcov" }]],
+    },
     setupFiles: ["./vitest-setup.ts"],
     environment: "happy-dom",
   },

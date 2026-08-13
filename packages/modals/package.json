@@ -29,6 +29,7 @@
   "type": "module",
   "sideEffects": false,
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
@@ -42,6 +43,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown --watch",
+    "lint-publish": "publint",
     "test": "vitest --run",
     "test-coverage": "vitest --run --coverage",
     "typecheck": "tsc --noEmit -p tsconfig.json"

@@ -25,17 +25,19 @@
     "typecheck": "turbo run typecheck",
     "format": "oxfmt",
     "format-check": "oxfmt --check",
-    "lint": "oxlint --fix",
+    "lint-fix": "oxlint --type-aware --fix",
     "lint-check": "oxlint --type-aware --deny-warnings",
-    "lint-publish": "pnpm --filter './packages/*' -r exec publint",
+    "lint-publish": "turbo run lint-publish --filter='./packages/*'",
+    "pre-commit": "./.githooks/pre-commit",
+    "pre-push": "./.githooks/pre-push",
+    "git-hooks-install": "./.githooks/install.sh",
     "release-change": "pnpm change",
     "release-status": "pnpm change status",
     "release-bump": "pnpm version -r",
     "release-publish": "pnpm publish -r --access public --publish-branch main",
-    "prepare": "husky"
+    "prepare": "pnpm run git-hooks-install"
   },
   "devDependencies": {
-    "husky": "9.1.7",
     "oxfmt": "0.61.0",
     "oxlint": "1.76.0",
     "oxlint-tsgolint": "7.0.2001",

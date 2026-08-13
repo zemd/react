@@ -11,6 +11,11 @@ updates:
       - "/packages/**"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
+      # Keep exemptions aligned with pnpm-workspace.yaml.
+      exclude:
+        - "@zemd/*"
     versioning-strategy: "increase" # the workspace pins exact versions (saveExact)
     open-pull-requests-limit: 10
     groups:
@@ -18,10 +23,41 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
+  # Update the images pinned in .devcontainer/Dockerfile.
+  - package-ecosystem: "docker"
+    directory: "/.devcontainer"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 10
+    groups:
+      devcontainer-images:
+        patterns:
+          - "*"
+  # Update Features in any devcontainer.json files.
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 10
+    groups:
+      devcontainer-features:
+        patterns:
+          - "*"
+  # Also keeps the `zemd/js/.github/workflows/shared-*.yml@<sha>` pins current.
+  # When it updates repo-release.yml, keep shared-tooling-ref on the same SHA.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
+      exclude:
+        - "zemd/js"
+        - "zemd/js/*"
     open-pull-requests-limit: 10
     groups:
       github-actions:

@@ -13,7 +13,7 @@ This package provides a lightweight approach that allows your component users to
 - Compatible with React Compiler
 - TypeScript support with full type inference
 - Uses `useMemo` and `useCallback` for slot resolution and rendering
-- Published as ESM and CommonJS with bundled TypeScript declarations
+- ESM-only package with bundled TypeScript declarations
 - No runtime dependencies beyond the React peer
 - Development mode warnings for debugging
 
@@ -27,7 +27,7 @@ yarn add @zemd/react-slottable
 
 ## Compatibility
 
-`@zemd/react-slottable` requires React 18 or newer and includes TypeScript declarations. It publishes both ESM and CommonJS entry points.
+`@zemd/react-slottable` requires React 18 or newer and is published as ESM with TypeScript declarations.
 
 Server-side rendering requires Node.js 22 or newer.
 

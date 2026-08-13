@@ -13,7 +13,7 @@ A pnpm and Turborepo monorepo for small, focused React libraries. Each library i
 | [`@zemd/react-modals`](packages/modals)       | [![npm](https://img.shields.io/npm/v/@zemd/react-modals?color=0000ff&label=npm&labelColor=000)](https://www.npmjs.com/package/@zemd/react-modals)       | Lightweight modal-stack management            |
 | [`@zemd/react-slottable`](packages/slottable) | [![npm](https://img.shields.io/npm/v/@zemd/react-slottable?color=0000ff&label=npm&labelColor=000)](https://www.npmjs.com/package/@zemd/react-slottable) | Typed customization of nested component slots |
 
-Both packages include TypeScript declarations and are licensed under Apache-2.0. See each package README for its installation, compatibility, and API documentation.
+Both packages are ESM-only, include TypeScript declarations, and are licensed under Apache-2.0. See each package README for its installation, compatibility, and API documentation.
 
 ## Getting started
 
@@ -25,21 +25,28 @@ cd react
 pnpm install
 ```
 
+### Dev Container
+
+The checked-in [Dev Container configuration](.devcontainer/devcontainer.json) provides the repository's pinned Node.js, pnpm, and zizmor versions. In VS Code, run **Dev Containers: Reopen in Container**. The first container creation installs the frozen workspace dependencies.
+
 ## Commands
 
 Commands run from the repository root and apply to the workspace packages that define the corresponding task.
 
-| Command              | Description                                          |
-| -------------------- | ---------------------------------------------------- |
-| `pnpm build`         | Build workspace projects through Turborepo           |
-| `pnpm test`          | Run package test suites                              |
-| `pnpm test-coverage` | Run package test suites with V8 coverage reports     |
-| `pnpm typecheck`     | Type-check package source without emitting files     |
-| `pnpm format`        | Format the repository with `oxfmt`                   |
-| `pnpm format-check`  | Check formatting without writing changes             |
-| `pnpm lint`          | Lint and apply safe fixes with `oxlint`              |
-| `pnpm lint-check`    | Run the full type-aware lint; fails on any finding   |
-| `pnpm lint-publish`  | Validate publishable package metadata with `publint` |
+| Command                      | Description                                          |
+| ---------------------------- | ---------------------------------------------------- |
+| `pnpm build`                 | Build workspace projects through Turborepo           |
+| `pnpm test`                  | Run package test suites                              |
+| `pnpm test-coverage`         | Run package tests and write V8 coverage as LCOV      |
+| `pnpm typecheck`             | Type-check package source without emitting files     |
+| `pnpm format`                | Format the repository with `oxfmt`                   |
+| `pnpm format-check`          | Check formatting without writing changes             |
+| `pnpm lint-fix`              | Run type-aware linting and auto-fix with `oxlint`    |
+| `pnpm lint-check`            | Run type-aware linting and fail on warnings          |
+| `pnpm lint-publish`          | Validate publishable package metadata with `publint` |
+| `pnpm pre-commit`            | Format, lint-fix, validate, and stage all files      |
+| `pnpm pre-push`              | Run the complete local pre-push validation graph     |
+| `pnpm run git-hooks-install` | Install this checkout's native Git hooks             |
 
 Use a workspace filter to run a package task directly:
 
@@ -54,7 +61,9 @@ Report vulnerabilities through the private channels described in [`SECURITY.md`]
 
 ## Contributing
 
-Issues and pull requests are welcome. Before opening a PR, please make sure that `pnpm lint-check`, `pnpm format-check`, `pnpm typecheck`, and `pnpm test` all pass.
+Issues and pull requests are welcome. Native hooks install automatically during `pnpm install`. The pre-commit hook runs repository-wide lint fixes and formatting, runs optional workspace `pre-commit` scripts, then stages all resulting changes. The pre-push hook runs builds, type checks, publication metadata checks, tests, and package `pre-push` tasks.
+
+Before opening a PR, please make sure that `pnpm lint-check`, `pnpm format-check`, `pnpm typecheck`, `pnpm build`, `pnpm test`, and `pnpm lint-publish` all pass.
 
 ## License
 

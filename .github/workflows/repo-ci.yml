@@ -1,0 +1,33 @@
+name: CI
+
+permissions: {}
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: CI
+    uses: zemd/js/.github/workflows/shared-ci.yml@bbc45ffa5ad42491dc7252ef798ecf1e78e9998b # v2
+    permissions:
+      contents: read
+    # Every input is optional. Node.js is fixed to lts/*, dependency review
+    # always runs on pull requests, and the workflow uses the standard package
+    # scripts: lint-check, format-check, typecheck, build, test, test-coverage,
+    # lint-publish, and test-browser.
+    # with:
+    #   os-matrix: '["ubuntu-latest", "macos-latest", "windows-latest"]'
+    #   report-change-intents: true
+    #   dependency-review-severity: high
+    #   dependency-review-scopes: "runtime, development, unknown"
+    #
+    # Linux runs the fixed `test-coverage` script instead of `test`. Opt in to
+    # Playwright's fixed `test-browser` script by naming its owning package.
+    # Leave `playwright-filter` empty to skip the browser job.
+    #   playwright-filter: "@acme/browser-tests"
