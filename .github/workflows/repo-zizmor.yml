@@ -21,7 +21,7 @@ concurrency:
 jobs:
   zizmor:
     name: zizmor
-    uses: zemd/js/.github/workflows/shared-zizmor.yml@21c83f87bacb1e8082bbee1221f1f129a9b51082 # v2
+    uses: zemd/js/.github/workflows/shared-zizmor.yml@bbc45ffa5ad42491dc7252ef798ecf1e78e9998b # v2
     permissions:
       contents: read # checkout and online audits
     # with:

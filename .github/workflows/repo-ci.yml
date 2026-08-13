@@ -14,7 +14,7 @@ concurrency:
 jobs:
   ci:
     name: CI
-    uses: zemd/js/.github/workflows/shared-ci.yml@21c83f87bacb1e8082bbee1221f1f129a9b51082 # v2
+    uses: zemd/js/.github/workflows/shared-ci.yml@bbc45ffa5ad42491dc7252ef798ecf1e78e9998b # v2
     permissions:
       contents: read
     # Every input is optional. Node.js is fixed to lts/*, dependency review
