@@ -19,8 +19,8 @@ catalogs:
       specifier: 4.1.10
       version: 4.1.10
     '@zemd/tsconfig':
-      specifier: 2.1.0
-      version: 2.1.0
+      specifier: 2.1.1
+      version: 2.1.1
     fast-check:
       specifier: 4.9.0
       version: 4.9.0
@@ -85,7 +85,7 @@ importers:
         version: 4.1.10(vitest@4.1.10)
       '@zemd/tsconfig':
         specifier: 'catalog:'
-        version: 2.1.0
+        version: 2.1.1
       fast-check:
         specifier: 'catalog:'
         version: 4.9.0
@@ -134,7 +134,7 @@ importers:
         version: 19.2.4(@types/react@19.2.18)
       '@zemd/tsconfig':
         specifier: 'catalog:'
-        version: 2.1.0
+        version: 2.1.1
       babel-plugin-react-compiler:
         specifier: 1.0.0
         version: 1.0.0
@@ -167,7 +167,7 @@ importers:
         version: 4.1.10(vitest@4.1.10)
       '@zemd/tsconfig':
         specifier: 'catalog:'
-        version: 2.1.0
+        version: 2.1.1
       fast-check:
         specifier: 'catalog:'
         version: 4.9.0
@@ -1250,8 +1250,8 @@ packages:
   '@yuku-toolchain/types@0.8.3':
     resolution: {integrity: sha512-9LN3HYs3A9qSPVFunsxlbfwBcUgexti3TmhOzIxB/UH8zFuaHQJXTRDcN17DW6cp1GsyZtiZA7f18uIra36Jag==}
 
-  '@zemd/tsconfig@2.1.0':
-    resolution: {integrity: sha512-9S+ZFYX5bGBfr2D1a80WvS69GvUTCIKFbyaND5yHq5MiP8RFD0fxHOhOchE7nWqAoSq67P63b32DyXw/vM9M8Q==}
+  '@zemd/tsconfig@2.1.1':
+    resolution: {integrity: sha512-H5d+BhQ2ewy1AdigaLdGrYc3HsroUq/NpdsdoMnEVIasE/AVC15xr+A6lfSa2qMc45Y6DgP2jhUHappUXC7yKA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -2578,7 +2578,7 @@ snapshots:
 
   '@yuku-toolchain/types@0.8.3': {}
 
-  '@zemd/tsconfig@2.1.0': {}
+  '@zemd/tsconfig@2.1.1': {}
 
   ansi-regex@5.0.1: {}
 
