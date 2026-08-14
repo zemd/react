@@ -1,6 +1,6 @@
 {
   "name": "@zemd/react-slottable",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "description": "A lightweight concept to customize subcomponents in React",
   "keywords": [
     "component",
