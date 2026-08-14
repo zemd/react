@@ -29,7 +29,7 @@ minimumReleaseAgeStrict: true
 minimumReleaseAgeIgnoreMissingTime: false
 minimumReleaseAgeExclude:
   - "@zemd/*"
-  - nanoid@3.3.17
+  - nanoid@3.3.17 || 3.3.18
 trustPolicy: no-downgrade
 
 allowBuilds:
@@ -37,3 +37,4 @@ allowBuilds:
 
 overrides:
   nanoid@<3.3.17: ^3.3.17
+  nanoid@<3.3.18: ^3.3.18
