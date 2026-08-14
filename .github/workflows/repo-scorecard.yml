@@ -17,7 +17,7 @@ concurrency:
 jobs:
   scorecard:
     name: Scorecard
-    uses: zemd/js/.github/workflows/shared-scorecard.yml@7a3e058a84bf059a8f9afa810ca4faec8fb71282 # v3
+    uses: zemd/js/.github/workflows/shared-scorecard.yml@e61d8c10a67016e8788b793388ef748ac80b4d35 # v4
     permissions:
       contents: read # checkout the repository for analysis
       actions: read # inspect workflow runs for dangerous patterns
