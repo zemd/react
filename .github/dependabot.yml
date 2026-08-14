@@ -47,8 +47,8 @@ updates:
       devcontainer-features:
         patterns:
           - "*"
-  # Also keeps the `zemd/js/.github/workflows/shared-*.yml@<sha>` pins current.
-  # When it updates repo-release.yml, keep shared-tooling-ref on the same SHA.
+  # Also keeps the `zemd/js/.github/workflows/shared-*.yml@<sha>` pins current,
+  # rewriting both the SHA and the `# v4` comment.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
