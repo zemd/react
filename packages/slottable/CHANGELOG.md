@@ -1,5 +1,11 @@
 # @zemd/react-slottable
 
+## 5.0.0
+
+### Major Changes
+
+- Publish @zemd/react-slottable as ESM-only and remove the CommonJS entry point.
+
 ## 4.0.3
 
 ### Patch Changes

@@ -2,3 +2,11 @@
   dir: packages/modals
   intents:
     - major-drinks-ring
+"@zemd/react-modals@1.1.1":
+  dir: packages/modals
+  intents:
+    - better-dolls-type
+"@zemd/react-slottable@5.0.0":
+  dir: packages/slottable
+  intents:
+    - chatty-towns-return

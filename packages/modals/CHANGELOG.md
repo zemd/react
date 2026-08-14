@@ -1,5 +1,11 @@
 # @zemd/react-modals
 
+## 1.1.1
+
+### Patch Changes
+
+- Expose the bundled TypeScript declaration entry consistently and validate the published package with publint.
+
 ## 1.1.0
 
 ### Minor Changes
