@@ -23,7 +23,7 @@ jobs:
     # dormant until setup is complete and excludes pull requests from forks.
     # Caller code runs without credentials; a separate fresh runner publishes.
     if: vars.BENCHER_PROJECT != '' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
-    uses: zemd/js/.github/workflows/shared-benchmarks.yml@bbc45ffa5ad42491dc7252ef798ecf1e78e9998b # v2
+    uses: zemd/js/.github/workflows/shared-benchmarks.yml@7a3e058a84bf059a8f9afa810ca4faec8fb71282 # v3
     permissions:
       contents: read # checkout the repository for benchmarks
       checks: write # used only by the isolated Bencher publishing job
