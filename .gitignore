@@ -16,11 +16,19 @@ dist/
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.pfx
+.npmrc
 
 # debug
 pnpm-debug.log*
 
 # local env files
+.env
+.env.*
+!.env.example
+!.env.*.example
 .env*.local
 
 # typescript

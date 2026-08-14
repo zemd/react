@@ -2,6 +2,7 @@
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "stream",
   "globalDependencies": [".node-version", "pnpm-workspace.yaml"],
+  "noUpdateNotifier": true,
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -10,6 +11,12 @@
     "test": {
       "dependsOn": ["^build"],
       "outputs": []
+    },
+    "test-bench": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "env": ["BENCHER_OUTPUT_DIR"],
+      "inputs": ["benchmarks/**", "package.json", "tsconfig.json"]
     },
     "test-coverage": {
       "dependsOn": ["^build"],
@@ -25,6 +32,16 @@
     },
     "typecheck": {
       "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "@zemd/react-modals#typecheck": {
+      "dependsOn": ["build", "^build"],
+      "inputs": ["benchmarks/**", "src/**", "package.json", "tsconfig.json"],
+      "outputs": []
+    },
+    "@zemd/react-slottable#typecheck": {
+      "dependsOn": ["build", "^build"],
+      "inputs": ["benchmarks/**", "src/**", "package.json", "tsconfig.json"],
       "outputs": []
     },
     "dev": {

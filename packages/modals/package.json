@@ -38,9 +38,11 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
+    "test-bench": "node ./benchmarks/store.bench.ts",
     "build": "tsdown --minify",
     "dev": "tsdown --watch",
     "lint-publish": "publint",
@@ -56,6 +58,7 @@
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "6.0.5",
     "@vitest/coverage-v8": "catalog:",
+    "@zemd/testing": "catalog:",
     "@zemd/tsconfig": "catalog:",
     "fast-check": "catalog:",
     "happy-dom": "20.11.1",

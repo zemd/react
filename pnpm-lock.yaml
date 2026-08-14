@@ -18,6 +18,9 @@ catalogs:
     '@vitest/coverage-v8':
       specifier: 4.1.10
       version: 4.1.10
+    '@zemd/testing':
+      specifier: 1.1.0
+      version: 1.1.0
     '@zemd/tsconfig':
       specifier: 2.1.1
       version: 2.1.1
@@ -86,6 +89,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 'catalog:'
         version: 4.1.10(vitest@4.1.10)
+      '@zemd/testing':
+        specifier: 'catalog:'
+        version: 1.1.0
       '@zemd/tsconfig':
         specifier: 'catalog:'
         version: 2.1.1
@@ -168,6 +174,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 'catalog:'
         version: 4.1.10(vitest@4.1.10)
+      '@zemd/testing':
+        specifier: 'catalog:'
+        version: 1.1.0
       '@zemd/tsconfig':
         specifier: 'catalog:'
         version: 2.1.1
@@ -1252,6 +1261,10 @@ packages:
 
   '@yuku-toolchain/types@0.8.3':
     resolution: {integrity: sha512-9LN3HYs3A9qSPVFunsxlbfwBcUgexti3TmhOzIxB/UH8zFuaHQJXTRDcN17DW6cp1GsyZtiZA7f18uIra36Jag==}
+
+  '@zemd/testing@1.1.0':
+    resolution: {integrity: sha512-rO2+2s3F05pxOCB3Nm7l1v39i2DfMI5FGMEP6jwNuv2SzmzEQrdE038/zK5DGluJdLwJyr8gZsaZOl+JXicXww==}
+    engines: {node: '>=24'}
 
   '@zemd/tsconfig@2.1.1':
     resolution: {integrity: sha512-H5d+BhQ2ewy1AdigaLdGrYc3HsroUq/NpdsdoMnEVIasE/AVC15xr+A6lfSa2qMc45Y6DgP2jhUHappUXC7yKA==}
@@ -2580,6 +2593,8 @@ snapshots:
     optional: true
 
   '@yuku-toolchain/types@0.8.3': {}
+
+  '@zemd/testing@1.1.0': {}
 
   '@zemd/tsconfig@2.1.1': {}
 

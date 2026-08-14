@@ -16,7 +16,7 @@
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
-      "extensions": ["EditorConfig.EditorConfig", "oxc.oxc-vscode"],
+      "extensions": ["EditorConfig.EditorConfig@0.18.2", "oxc.oxc-vscode@1.60.0"],
       "settings": {
         "editor.defaultFormatter": "oxc.oxc-vscode",
         "editor.formatOnSave": true,

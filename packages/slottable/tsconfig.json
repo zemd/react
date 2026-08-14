@@ -9,6 +9,6 @@
     "sourceMap": false,
     "declarationMap": false
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["benchmarks/**/*.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
 }
